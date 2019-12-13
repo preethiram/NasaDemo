@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NASA Info</string>
+    <string name="des_loads_apod_image">Loads APOD image</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="no_results_found_swipe_to_refresh">No results found. Swipe to refresh.</string>
+    <string name="no_internet_connection_">No internet connection.\n Check internet connection and swip to refesh</string>
+    <string name="data_loaded">Data loaded</string>
+
+</resources>

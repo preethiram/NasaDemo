@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="@dimen/_8_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/apod_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/des_loads_apod_image"
+            android:minHeight="240dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/apod_info_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/_16_dp"
+            app:layout_constraintLeft_toLeftOf="@id/apod_iv"
+            app:layout_constraintRight_toRightOf="@id/apod_iv"
+            app:layout_constraintTop_toBottomOf="@id/apod_iv">
+
+
+            <TextView
+                android:id="@+id/apod_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/font_14_sp" />
+
+
+            <TextView
+                android:id="@+id/apod_copyright_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/apod_title_tv"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@id/apod_date_tv"
+                android:layout_toLeftOf="@id/apod_date_tv"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/font_16_sp" />
+
+            <TextView
+                android:id="@+id/apod_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/apod_date_tv"
+                android:layout_marginTop="@dimen/_8_dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/font_16_sp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
